@@ -32,36 +32,36 @@ nav li {
 .card {
   background-color: antiquewhite;
   max-width: 300px;
-  margin: auto;
   text-align: center;
   font-family: arial;
-  text-align: center;
   border: 1px solid black;
 }
 .price {
+  font-size: 15px;
   color: gray;
 }
 .card button {
   border: #000 solid 2px;
   outline: 0;
-  padding: 12px;
+  padding: 5px;
   color: black;
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 18px;
+  font-size: 12px;
 }
 .card button:hover {
   opacity: 0.7;
 }
 article {
-    gap: 10px;
+  padding: 10px;
+  gap: 10px;
   grid-area: a;
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
 .rendeles {
-    margin-top: 5px;
+  margin-top: 5px;
   display: grid;
   grid-template-columns: auto auto;
 }
@@ -70,22 +70,35 @@ aside {
   background-color: aqua;
 }
 footer {
+  font-size: 15px;
   grid-area: f;
 }
-img{
-    border-radius: 25px;
+img {
+  padding: 10px;
+  width: 100%;
+  border-radius: 25px;
 }
-@media screen and (max-width:600px) {
-    main{ 
-        grid-template-areas:
-        "n"
-        "as"
-        "a"
-        "f";
-
-    }
-    article{
-        grid-template-rows: auto;
-    }
-    
+@media screen and (max-width: 800px) {
+  main {
+    grid-template-areas:
+      "n"
+      "as"
+      "a"
+      "f";
+  }
+  article {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  main {
+    grid-template-areas:
+      "n"
+      "as"
+      "a"
+      "f";
+  }
+  article {
+    grid-template-columns: auto;
+  }
 }
